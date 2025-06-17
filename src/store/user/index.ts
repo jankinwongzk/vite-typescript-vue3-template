@@ -24,11 +24,26 @@ export const useUserStoreHook = defineStore('userInfo', {
                 return res;
             });
         }
+        // stroeRefreshUserInfo() {
+        //     if (this.username == '大伟' && this.accessToken != '') {
+        //         refreshUserInfo({
+        //             accessToken: this.accessToken
+        //         })
+        //             .then((res) => {
+        //                 this.username = res.username;
+        //                 this.roles = res.roles;
+        //                 this.accessToken = res.accessToken;
+        //             })
+        //             .catch(() => {
+        //                 this.accessToken = '';
+        //             });
+        //     }
+        // }
     },
     persist: {
         key: 'userInfo',
         storage: sessionStorage,
-        pick: ['accessToken']
+        paths: ['accessToken']
     }
 });
 export function useUserStore() {

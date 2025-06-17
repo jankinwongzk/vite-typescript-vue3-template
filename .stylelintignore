@@ -1,0 +1,16 @@
+/dist
+/node_modules
+/public
+.husky
+.vscode
+.idea
+*.js
+*.jsx
+*.ts
+*.tsx
+*.md
+*.json
+*.lock
+*.log
+stats.html
+index.html 
